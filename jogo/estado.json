@@ -1,10 +1,10 @@
 {
   "tabuleiro": [
+    "O",
     "",
     "",
     "",
-    "",
-    "",
+    "X",
     "",
     "",
     "",
@@ -16,5 +16,8 @@
     "bot": 0,
     "empates": 0
   },
-  "ultimo": null
+  "ultimo": {
+    "usuario": "luizcristo-cyber",
+    "casa": 5
+  }
 }
