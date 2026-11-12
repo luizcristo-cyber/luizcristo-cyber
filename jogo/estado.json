@@ -1,0 +1,20 @@
+{
+  "tabuleiro": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "fim": null,
+  "placar": {
+    "visitantes": 0,
+    "bot": 0,
+    "empates": 0
+  },
+  "ultimo": null
+}

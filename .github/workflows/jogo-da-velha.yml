@@ -1,0 +1,68 @@
+name: Jogo da Velha
+
+on:
+  issues:
+    types: [opened]
+  # Re-renderiza o tabuleiro sem jogada (útil na primeira execução, para corrigir os links).
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+# Jogadas são processadas uma por vez, na ordem em que chegam.
+concurrency:
+  group: jogo-da-velha
+  cancel-in-progress: false
+
+jobs:
+  jogar:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      startsWith(github.event.issue.title, 'jogada-') ||
+      github.event.issue.title == 'reiniciar'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # O título da issue é controlado por quem abre a issue: passa só por variável
+      # de ambiente (nunca interpolado no shell) e é validado por regex no script.
+      - name: Processar jogada
+        run: node .github/scripts/jogo.mjs
+        env:
+          REPO: ${{ github.repository }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_USER: ${{ github.event.issue.user.login }}
+          RESPOSTA_FILE: ${{ runner.temp }}/resposta.md
+
+      - name: Salvar estado do jogo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md jogo/estado.json
+          if git diff --cached --quiet; then
+            echo "Nada a commitar."
+          else
+            git commit -m "jogo: atualiza tabuleiro"
+            git push
+          fi
+
+      - name: Responder e fechar a issue
+        if: always() && github.event_name == 'issues'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          NUMERO: ${{ github.event.issue.number }}
+          RESPOSTA: ${{ runner.temp }}/resposta.md
+        run: |
+          if [ ! -s "$RESPOSTA" ]; then
+            echo "Não foi possível processar sua jogada agora. Tente novamente em instantes." > "$RESPOSTA"
+          fi
+          gh issue comment "$NUMERO" --body-file "$RESPOSTA"
+          gh issue close "$NUMERO"
