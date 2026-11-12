@@ -45,6 +45,18 @@ Sua vez! Você joga com ❌. Clique em um ⬜ e depois em <b>Submit new issue</b
 </div>
 <!--JOGO:FIM-->
 
+## 🐍 Minha cobrinha de contribuições
+
+Uma cobrinha que percorre meu gráfico de contribuições e vai comendo cada commit. A animação é regenerada automaticamente a cada 12 horas.
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/luizcristo-cyber/luizcristo-cyber/output/github-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/luizcristo-cyber/luizcristo-cyber/output/github-snake.svg" />
+    <img alt="Cobrinha comendo as minhas contribuições do GitHub" src="https://raw.githubusercontent.com/luizcristo-cyber/luizcristo-cyber/output/github-snake.svg" />
+  </picture>
+</div>
+
 <details>
 <summary>📊 Minhas estatísticas</summary>
 
