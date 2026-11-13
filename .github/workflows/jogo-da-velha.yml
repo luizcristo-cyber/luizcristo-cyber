@@ -50,6 +50,7 @@ jobs:
             echo "Nada a commitar."
           else
             git commit -m "jogo: atualiza tabuleiro"
+            git pull --rebase --quiet
             git push
           fi
 

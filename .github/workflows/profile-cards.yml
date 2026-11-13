@@ -1,0 +1,78 @@
+name: Atualizar cartoes do perfil
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cartoes-do-perfil
+  cancel-in-progress: true
+
+jobs:
+  cartoes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Cada gerador pode falhar sozinho; o SVG anterior continua no repositorio.
+      # As acoes de terceiros abaixo estao fixadas por commit (rodam com acesso de escrita).
+      - name: Gerar cartao de estatisticas
+        uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
+        continue-on-error: true
+        with:
+          card: stats
+          options: username=${{ github.repository_owner }}&show_icons=true&include_all_commits=true&hide_border=true&rank_icon=percentile&locale=pt-br&theme=transparent
+          path: profile/stats.svg
+          token: ${{ secrets.STATS_TOKEN || secrets.GITHUB_TOKEN }}
+          fail_on_error: true
+
+      - name: Gerar cartao de sequencia (streak)
+        uses: DenverCoder1/github-readme-streak-stats@125aaaf200620410446ebfa51897fca3607e04fd # v1.8.2
+        continue-on-error: true
+        with:
+          options: user=${{ github.repository_owner }}&locale=pt_BR&hide_border=true&theme=transparent
+          path: profile/streak.svg
+          token: ${{ secrets.STATS_TOKEN || secrets.GITHUB_TOKEN }}
+
+      # O gerador de streak pode pular um ano quando a API falha. Contribuicoes quase
+      # nunca diminuem, entao uma queda acima de 5% indica dado ruim: mantem o cartao anterior.
+      - name: Manter o streak anterior se o total cair
+        run: |
+          total() { sed 's/<[^>]*>/ /g' "$1" | tr -s ' \n' ' ' | grep -oE '[0-9.,]+ (Total Contributions|Total de contribui[^ ]*)' | tr -dc '0-9'; }
+          git show HEAD:profile/streak.svg > "$RUNNER_TEMP/streak-antigo.svg" 2>/dev/null || exit 0
+          antigo=$(total "$RUNNER_TEMP/streak-antigo.svg")
+          novo=$(total profile/streak.svg)
+          echo "Total anterior: ${antigo:-?} | Total novo: ${novo:-?}"
+          if [ -n "$antigo" ] && [ -n "$novo" ] && [ $((novo * 100)) -lt $((antigo * 95)) ]; then
+            echo "::warning::Total do streak caiu de $antigo para $novo; mantendo o cartao anterior."
+            git checkout -- profile/streak.svg
+          fi
+
+      - name: Gerar animacao da cobrinha
+        uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3.5.0
+        continue-on-error: true
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            profile/github-snake.svg
+            profile/github-snake-dark.svg?palette=github-dark
+
+      - name: Salvar cartoes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add profile/*.svg
+          if git diff --cached --quiet; then
+            echo "Nada a commitar."
+            exit 0
+          fi
+          git commit -m "chore: atualiza cartoes do perfil"
+          # O jogo da velha tambem commita no main; integra antes de enviar.
+          git pull --rebase --quiet
+          git push
