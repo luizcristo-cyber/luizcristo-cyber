@@ -1,7 +1,7 @@
 {
   "tabuleiro": [
     "X",
-    "",
+    "X",
     "O",
     "O",
     "O",
@@ -10,14 +10,14 @@
     "O",
     "X"
   ],
-  "fim": null,
+  "fim": "empate",
   "placar": {
     "visitantes": 0,
     "bot": 0,
-    "empates": 0
+    "empates": 1
   },
   "ultimo": {
     "usuario": "redgp0g",
-    "casa": 7
+    "casa": 2
   }
 }
