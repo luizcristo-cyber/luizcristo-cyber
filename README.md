@@ -33,14 +33,14 @@ Você contra o bot, direto no meu perfil. Cada clique abre uma issue; uma GitHub
 <div align="center">
 
 <table>
-    <tr><td align="center" width="64" height="64">❌</td><td align="center" width="64" height="64"><a href="https://github.com/luizcristo-cyber/luizcristo-cyber/issues/new?title=jogada-1&amp;body=Basta%20clicar%20em%20%22Submit%20new%20issue%22.%20N%C3%A3o%20altere%20o%20t%C3%ADtulo." title="Jogar na casa 2">⬜</a></td><td align="center" width="64" height="64"><a href="https://github.com/luizcristo-cyber/luizcristo-cyber/issues/new?title=jogada-2&amp;body=Basta%20clicar%20em%20%22Submit%20new%20issue%22.%20N%C3%A3o%20altere%20o%20t%C3%ADtulo." title="Jogar na casa 3">⬜</a></td></tr>
-    <tr><td align="center" width="64" height="64">⭕</td><td align="center" width="64" height="64">⭕</td><td align="center" width="64" height="64"><a href="https://github.com/luizcristo-cyber/luizcristo-cyber/issues/new?title=jogada-5&amp;body=Basta%20clicar%20em%20%22Submit%20new%20issue%22.%20N%C3%A3o%20altere%20o%20t%C3%ADtulo." title="Jogar na casa 6">⬜</a></td></tr>
+    <tr><td align="center" width="64" height="64">❌</td><td align="center" width="64" height="64"><a href="https://github.com/luizcristo-cyber/luizcristo-cyber/issues/new?title=jogada-1&amp;body=Basta%20clicar%20em%20%22Submit%20new%20issue%22.%20N%C3%A3o%20altere%20o%20t%C3%ADtulo." title="Jogar na casa 2">⬜</a></td><td align="center" width="64" height="64">⭕</td></tr>
+    <tr><td align="center" width="64" height="64">⭕</td><td align="center" width="64" height="64">⭕</td><td align="center" width="64" height="64">❌</td></tr>
     <tr><td align="center" width="64" height="64"><a href="https://github.com/luizcristo-cyber/luizcristo-cyber/issues/new?title=jogada-6&amp;body=Basta%20clicar%20em%20%22Submit%20new%20issue%22.%20N%C3%A3o%20altere%20o%20t%C3%ADtulo." title="Jogar na casa 7">⬜</a></td><td align="center" width="64" height="64"><a href="https://github.com/luizcristo-cyber/luizcristo-cyber/issues/new?title=jogada-7&amp;body=Basta%20clicar%20em%20%22Submit%20new%20issue%22.%20N%C3%A3o%20altere%20o%20t%C3%ADtulo." title="Jogar na casa 8">⬜</a></td><td align="center" width="64" height="64">❌</td></tr>
 </table>
 
 Sua vez! Você joga com ❌. Clique em um ⬜ e depois em <b>Submit new issue</b> (é preciso estar logado no GitHub).
 
-<sub>Última jogada: casa 1 por <a href="https://github.com/redgp0g">@redgp0g</a> · Placar: visitantes 0 · bot 0 · empates 0</sub>
+<sub>Última jogada: casa 6 por <a href="https://github.com/redgp0g">@redgp0g</a> · Placar: visitantes 0 · bot 0 · empates 0</sub>
 
 </div>
 <!--JOGO:FIM-->

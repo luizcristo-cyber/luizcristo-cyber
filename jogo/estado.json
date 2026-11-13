@@ -2,10 +2,10 @@
   "tabuleiro": [
     "X",
     "",
-    "",
     "O",
     "O",
-    "",
+    "O",
+    "X",
     "",
     "",
     "X"
@@ -18,6 +18,6 @@
   },
   "ultimo": {
     "usuario": "redgp0g",
-    "casa": 1
+    "casa": 6
   }
 }
