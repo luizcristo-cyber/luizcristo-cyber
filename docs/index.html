@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Campo Minado · Luiz Augusto</title>
+  <meta name="description" content="Campo minado clássico, jogável direto no navegador: três níveis, bandeiras, cronômetro e recordes.">
+  <meta name="theme-color" content="#008080">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23c0c0c0'/%3E%3Cpath stroke='%23000' stroke-width='1.4' d='M8 1.5v13M1.5 8h13M3.4 3.4l9.2 9.2M12.6 3.4l-9.2 9.2'/%3E%3Ccircle cx='8' cy='8' r='4.6'/%3E%3Crect x='5.6' y='5.6' width='2' height='2' fill='%23fff'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <main class="area">
+    <section class="janela" id="janela" aria-labelledby="titulo">
+      <header class="titulo">
+        <span class="titulo-icone" aria-hidden="true"></span>
+        <h1 id="titulo">Campo Minado</h1>
+        <span class="titulo-botoes" aria-hidden="true"><i>_</i><i>□</i><i>×</i></span>
+      </header>
+
+      <nav class="menu" aria-label="Menu do jogo">
+        <details class="menu-jogo" id="menu-jogo">
+          <summary>Jogo</summary>
+          <div class="menu-lista">
+            <button type="button" id="menu-novo">Novo <kbd>F2</kbd></button>
+            <hr>
+            <button type="button" data-nivel="iniciante">Iniciante</button>
+            <button type="button" data-nivel="intermediario">Intermediário</button>
+            <button type="button" data-nivel="especialista">Especialista</button>
+          </div>
+        </details>
+        <button type="button" id="modo-bandeira" class="alternar" aria-pressed="false" title="Com o modo ligado, cada clique marca ou desmarca uma bandeira">
+          <span class="icone-bandeira" aria-hidden="true"></span>Bandeira
+        </button>
+      </nav>
+
+      <div class="corpo">
+        <div class="painel">
+          <div class="led" id="led-minas" role="img"></div>
+          <button type="button" id="rosto" class="rosto" aria-label="Novo jogo" title="Novo jogo (F2)"></button>
+          <div class="led" id="led-tempo" role="img"></div>
+        </div>
+        <div class="moldura">
+          <div class="tabuleiro" id="tabuleiro" role="group" aria-label="Tabuleiro"></div>
+        </div>
+      </div>
+
+      <footer class="barra-status">
+        <span id="status" role="status" aria-live="polite"></span>
+        <span id="recorde"></span>
+      </footer>
+    </section>
+
+    <p class="dica">
+      Clique para abrir uma casa. Botão direito ou toque longo marca uma bandeira.
+      Clique em um número com as bandeiras certas ao redor para abrir os vizinhos.
+    </p>
+  </main>
+
+  <footer class="tarefas">
+    <a class="iniciar" href="https://github.com/luizcristo-cyber">&#9664; Perfil no GitHub</a>
+    <span class="tarefa">Campo Minado</span>
+    <time class="relogio" id="relogio"></time>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

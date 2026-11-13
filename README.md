@@ -27,36 +27,21 @@ Trabalho com **Fluig**, **automação de processos** e **integrações**. Meu fo
 
 ## Jogue comigo: Campo Minado
 
-Clique em um 🟩 para abrir a casa. O número mostra quantas minas existem nas 8 casas ao redor, e ⬜ quer dizer nenhuma. Abriu 💥? Perdeu: recarregue a página para recomeçar. Você vence ao abrir todas as casas sem mina.
+<p align="center">
+  <a href="https://luizcristo-cyber.github.io/luizcristo-cyber/">
+    <img width="300" src="https://raw.githubusercontent.com/luizcristo-cyber/luizcristo-cyber/main/profile/campo-minado.svg" alt="Campo minado no estilo clássico: clique para jogar" />
+  </a>
+</p>
 
-<!--CAMPO:INICIO-->
-<div align="center">
-<table>
-<tr><td align="center">⬜</td><td align="center">⬜</td><td align="center">1️⃣</td><td align="center"><details><summary>🟩</summary>💥</details></td><td align="center"><details><summary>🟩</summary>2️⃣</details></td><td align="center"><details><summary>🟩</summary>1️⃣</details></td><td align="center"><details><summary>🟩</summary>1️⃣</details></td><td align="center"><details><summary>🟩</summary>⬜</details></td></tr>
-<tr><td align="center">⬜</td><td align="center">⬜</td><td align="center">1️⃣</td><td align="center"><details><summary>🟩</summary>1️⃣</details></td><td align="center"><details><summary>🟩</summary>2️⃣</details></td><td align="center"><details><summary>🟩</summary>💥</details></td><td align="center"><details><summary>🟩</summary>1️⃣</details></td><td align="center"><details><summary>🟩</summary>⬜</details></td></tr>
-<tr><td align="center">1️⃣</td><td align="center">1️⃣</td><td align="center">1️⃣</td><td align="center"><details><summary>🟩</summary>⬜</details></td><td align="center"><details><summary>🟩</summary>1️⃣</details></td><td align="center"><details><summary>🟩</summary>1️⃣</details></td><td align="center"><details><summary>🟩</summary>1️⃣</details></td><td align="center"><details><summary>🟩</summary>⬜</details></td></tr>
-<tr><td align="center"><details><summary>🟩</summary>2️⃣</details></td><td align="center"><details><summary>🟩</summary>💥</details></td><td align="center"><details><summary>🟩</summary>2️⃣</details></td><td align="center"><details><summary>🟩</summary>⬜</details></td><td align="center"><details><summary>🟩</summary>⬜</details></td><td align="center"><details><summary>🟩</summary>⬜</details></td><td align="center"><details><summary>🟩</summary>1️⃣</details></td><td align="center"><details><summary>🟩</summary>1️⃣</details></td></tr>
-<tr><td align="center"><details><summary>🟩</summary>2️⃣</details></td><td align="center"><details><summary>🟩</summary>💥</details></td><td align="center"><details><summary>🟩</summary>2️⃣</details></td><td align="center"><details><summary>🟩</summary>⬜</details></td><td align="center"><details><summary>🟩</summary>⬜</details></td><td align="center"><details><summary>🟩</summary>⬜</details></td><td align="center"><details><summary>🟩</summary>1️⃣</details></td><td align="center"><details><summary>🟩</summary>💥</details></td></tr>
-<tr><td align="center"><details><summary>🟩</summary>1️⃣</details></td><td align="center"><details><summary>🟩</summary>1️⃣</details></td><td align="center"><details><summary>🟩</summary>2️⃣</details></td><td align="center"><details><summary>🟩</summary>1️⃣</details></td><td align="center"><details><summary>🟩</summary>1️⃣</details></td><td align="center"><details><summary>🟩</summary>⬜</details></td><td align="center"><details><summary>🟩</summary>1️⃣</details></td><td align="center"><details><summary>🟩</summary>1️⃣</details></td></tr>
-<tr><td align="center"><details><summary>🟩</summary>1️⃣</details></td><td align="center"><details><summary>🟩</summary>1️⃣</details></td><td align="center"><details><summary>🟩</summary>2️⃣</details></td><td align="center"><details><summary>🟩</summary>💥</details></td><td align="center"><details><summary>🟩</summary>3️⃣</details></td><td align="center"><details><summary>🟩</summary>2️⃣</details></td><td align="center"><details><summary>🟩</summary>2️⃣</details></td><td align="center"><details><summary>🟩</summary>1️⃣</details></td></tr>
-<tr><td align="center"><details><summary>🟩</summary>1️⃣</details></td><td align="center"><details><summary>🟩</summary>💥</details></td><td align="center"><details><summary>🟩</summary>2️⃣</details></td><td align="center"><details><summary>🟩</summary>2️⃣</details></td><td align="center"><details><summary>🟩</summary>💥</details></td><td align="center"><details><summary>🟩</summary>💥</details></td><td align="center"><details><summary>🟩</summary>2️⃣</details></td><td align="center"><details><summary>🟩</summary>💥</details></td></tr>
-</table>
-<sub>Campo de 13/11/2026 · 10 minas · 45 casas seguras para abrir · um campo novo todo dia</sub>
-<details>
-<summary>Ver gabarito</summary>
-<table>
-<tr><td align="center">⬜</td><td align="center">⬜</td><td align="center">1️⃣</td><td align="center">💣</td><td align="center">2️⃣</td><td align="center">1️⃣</td><td align="center">1️⃣</td><td align="center">⬜</td></tr>
-<tr><td align="center">⬜</td><td align="center">⬜</td><td align="center">1️⃣</td><td align="center">1️⃣</td><td align="center">2️⃣</td><td align="center">💣</td><td align="center">1️⃣</td><td align="center">⬜</td></tr>
-<tr><td align="center">1️⃣</td><td align="center">1️⃣</td><td align="center">1️⃣</td><td align="center">⬜</td><td align="center">1️⃣</td><td align="center">1️⃣</td><td align="center">1️⃣</td><td align="center">⬜</td></tr>
-<tr><td align="center">2️⃣</td><td align="center">💣</td><td align="center">2️⃣</td><td align="center">⬜</td><td align="center">⬜</td><td align="center">⬜</td><td align="center">1️⃣</td><td align="center">1️⃣</td></tr>
-<tr><td align="center">2️⃣</td><td align="center">💣</td><td align="center">2️⃣</td><td align="center">⬜</td><td align="center">⬜</td><td align="center">⬜</td><td align="center">1️⃣</td><td align="center">💣</td></tr>
-<tr><td align="center">1️⃣</td><td align="center">1️⃣</td><td align="center">2️⃣</td><td align="center">1️⃣</td><td align="center">1️⃣</td><td align="center">⬜</td><td align="center">1️⃣</td><td align="center">1️⃣</td></tr>
-<tr><td align="center">1️⃣</td><td align="center">1️⃣</td><td align="center">2️⃣</td><td align="center">💣</td><td align="center">3️⃣</td><td align="center">2️⃣</td><td align="center">2️⃣</td><td align="center">1️⃣</td></tr>
-<tr><td align="center">1️⃣</td><td align="center">💣</td><td align="center">2️⃣</td><td align="center">2️⃣</td><td align="center">💣</td><td align="center">💣</td><td align="center">2️⃣</td><td align="center">💣</td></tr>
-</table>
-</details>
-</div>
-<!--CAMPO:FIM-->
+<p align="center">
+  O campo minado clássico, completo: três níveis, bandeiras, cronômetro e recordes. Acertou uma mina, acabou.
+</p>
+
+<p align="center">
+  <a href="https://luizcristo-cyber.github.io/luizcristo-cyber/">
+    <img src="https://img.shields.io/badge/%E2%96%B6%20Jogar%20agora-000080?style=for-the-badge" alt="Jogar agora" />
+  </a>
+</p>
 
 ## Atividade no GitHub
 

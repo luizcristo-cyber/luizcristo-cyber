@@ -76,11 +76,6 @@ jobs:
             profile/github-snake.svg
             profile/github-snake-dark.svg?palette=github-dark
 
-      - name: Gerar campo minado do dia
-        id: campo
-        continue-on-error: true
-        run: node .github/scripts/campo-minado.mjs
-
       # continue-on-error faz a etapa falha parecer sucesso; aqui a falha vira aviso visivel.
       - name: Avisar geradores que falharam
         if: always()
@@ -88,9 +83,8 @@ jobs:
           STATS: ${{ steps.stats.outcome }}
           STREAK: ${{ steps.streak.outcome }}
           SNAKE: ${{ steps.snake.outcome }}
-          CAMPO: ${{ steps.campo.outcome }}
         run: |
-          for item in "estatisticas:$STATS" "streak:$STREAK" "cobrinha:$SNAKE" "campo minado:$CAMPO"; do
+          for item in "estatisticas:$STATS" "streak:$STREAK" "cobrinha:$SNAKE"; do
             if [ "${item#*:}" = "failure" ]; then
               echo "::warning::Gerador de ${item%%:*} falhou; o cartao anterior foi mantido. Veja o log da etapa (token invalido ou limite da API)."
             fi
@@ -100,12 +94,12 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add profile/*.svg README.md
+          git add profile/stats.svg profile/streak.svg profile/github-snake.svg profile/github-snake-dark.svg
           if git diff --cached --quiet; then
             echo "Nada a commitar."
             exit 0
           fi
-          git commit -m "chore: atualiza cartoes e campo minado"
+          git commit -m "chore: atualiza cartoes do perfil"
           # Integra commits que tenham chegado ao main durante a execucao.
           git pull --rebase --quiet
           git push
