@@ -32,6 +32,7 @@ jobs:
       # Cada gerador pode falhar sozinho; o SVG anterior continua no repositorio.
       # As acoes de terceiros abaixo estao fixadas por commit (rodam com acesso de escrita).
       - name: Gerar cartao de estatisticas
+        id: stats
         uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
         continue-on-error: true
         with:
@@ -42,6 +43,7 @@ jobs:
           fail_on_error: true
 
       - name: Gerar cartao de sequencia (streak)
+        id: streak
         uses: DenverCoder1/github-readme-streak-stats@125aaaf200620410446ebfa51897fca3607e04fd # v1.8.2
         continue-on-error: true
         with:
@@ -64,6 +66,7 @@ jobs:
           fi
 
       - name: Gerar animacao da cobrinha
+        id: snake
         uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3.5.0
         continue-on-error: true
         with:
@@ -72,6 +75,20 @@ jobs:
           outputs: |
             profile/github-snake.svg
             profile/github-snake-dark.svg?palette=github-dark
+
+      # continue-on-error faz a etapa falha parecer sucesso; aqui a falha vira aviso visivel.
+      - name: Avisar geradores que falharam
+        if: always()
+        env:
+          STATS: ${{ steps.stats.outcome }}
+          STREAK: ${{ steps.streak.outcome }}
+          SNAKE: ${{ steps.snake.outcome }}
+        run: |
+          for item in "estatisticas:$STATS" "streak:$STREAK" "cobrinha:$SNAKE"; do
+            if [ "${item#*:}" = "failure" ]; then
+              echo "::warning::Gerador de ${item%%:*} falhou; o cartao anterior foi mantido. Veja o log da etapa (token invalido ou limite da API)."
+            fi
+          done
 
       - name: Salvar cartoes
         run: |
