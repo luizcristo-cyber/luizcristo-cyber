@@ -1,9 +1,9 @@
 {
   "tabuleiro": [
+    "X",
     "",
     "",
-    "",
-    "",
+    "O",
     "O",
     "",
     "",
@@ -17,7 +17,7 @@
     "empates": 0
   },
   "ultimo": {
-    "usuario": "luizcristo-cyber",
-    "casa": 9
+    "usuario": "redgp0g",
+    "casa": 1
   }
 }
