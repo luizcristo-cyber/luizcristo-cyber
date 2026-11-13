@@ -6,8 +6,8 @@
     "O",
     "O",
     "X",
-    "",
-    "",
+    "X",
+    "O",
     "X"
   ],
   "fim": null,
@@ -18,6 +18,6 @@
   },
   "ultimo": {
     "usuario": "redgp0g",
-    "casa": 6
+    "casa": 7
   }
 }
