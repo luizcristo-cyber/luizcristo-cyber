@@ -25,25 +25,84 @@ Trabalho com **Fluig**, **automação de processos** e **integrações**. Meu fo
   </a>
 </p>
 
-## Jogue comigo: Jogo da Velha
+## Jogue comigo: Deploy de Sexta
 
-Você contra o bot, direto no meu perfil. Cada clique abre uma issue; uma GitHub Action processa a jogada, atualiza o tabuleiro abaixo e responde em segundos.
+Uma mini-aventura jogável aqui mesmo, só com cliques. Escolha uma opção para avançar. Errou? Feche a opção e tente outra.
 
-<!--JOGO:INICIO-->
-<div align="center">
-
-<table>
-    <tr><td align="center" width="64" height="64"><a href="https://github.com/luizcristo-cyber/luizcristo-cyber/issues/new?title=jogada-0&amp;body=Basta%20clicar%20em%20%22Submit%20new%20issue%22.%20N%C3%A3o%20altere%20o%20t%C3%ADtulo." title="Jogar na casa 1">⬜</a></td><td align="center" width="64" height="64"><a href="https://github.com/luizcristo-cyber/luizcristo-cyber/issues/new?title=jogada-1&amp;body=Basta%20clicar%20em%20%22Submit%20new%20issue%22.%20N%C3%A3o%20altere%20o%20t%C3%ADtulo." title="Jogar na casa 2">⬜</a></td><td align="center" width="64" height="64"><a href="https://github.com/luizcristo-cyber/luizcristo-cyber/issues/new?title=jogada-2&amp;body=Basta%20clicar%20em%20%22Submit%20new%20issue%22.%20N%C3%A3o%20altere%20o%20t%C3%ADtulo." title="Jogar na casa 3">⬜</a></td></tr>
-    <tr><td align="center" width="64" height="64"><a href="https://github.com/luizcristo-cyber/luizcristo-cyber/issues/new?title=jogada-3&amp;body=Basta%20clicar%20em%20%22Submit%20new%20issue%22.%20N%C3%A3o%20altere%20o%20t%C3%ADtulo." title="Jogar na casa 4">⬜</a></td><td align="center" width="64" height="64"><a href="https://github.com/luizcristo-cyber/luizcristo-cyber/issues/new?title=jogada-4&amp;body=Basta%20clicar%20em%20%22Submit%20new%20issue%22.%20N%C3%A3o%20altere%20o%20t%C3%ADtulo." title="Jogar na casa 5">⬜</a></td><td align="center" width="64" height="64"><a href="https://github.com/luizcristo-cyber/luizcristo-cyber/issues/new?title=jogada-5&amp;body=Basta%20clicar%20em%20%22Submit%20new%20issue%22.%20N%C3%A3o%20altere%20o%20t%C3%ADtulo." title="Jogar na casa 6">⬜</a></td></tr>
-    <tr><td align="center" width="64" height="64"><a href="https://github.com/luizcristo-cyber/luizcristo-cyber/issues/new?title=jogada-6&amp;body=Basta%20clicar%20em%20%22Submit%20new%20issue%22.%20N%C3%A3o%20altere%20o%20t%C3%ADtulo." title="Jogar na casa 7">⬜</a></td><td align="center" width="64" height="64"><a href="https://github.com/luizcristo-cyber/luizcristo-cyber/issues/new?title=jogada-7&amp;body=Basta%20clicar%20em%20%22Submit%20new%20issue%22.%20N%C3%A3o%20altere%20o%20t%C3%ADtulo." title="Jogar na casa 8">⬜</a></td><td align="center" width="64" height="64"><a href="https://github.com/luizcristo-cyber/luizcristo-cyber/issues/new?title=jogada-8&amp;body=Basta%20clicar%20em%20%22Submit%20new%20issue%22.%20N%C3%A3o%20altere%20o%20t%C3%ADtulo." title="Jogar na casa 9">⬜</a></td></tr>
-</table>
-
-Sua vez! Você joga com ❌. Clique em um ⬜ e depois em <b>Submit new issue</b> (é preciso estar logado no GitHub).
-
-<sub>Última jogada: casa 2 por <a href="https://github.com/redgp0g">@redgp0g</a> · Placar: visitantes 0 · bot 0 · empates 1</sub>
-
-</div>
-<!--JOGO:FIM-->
+<details>
+<summary><b>▶️ Começar a missão</b></summary>
+<blockquote>
+<p>🕔 <b>Sexta-feira, 16h50.</b> O formulário novo do Fluig está pronto e o chefe quer em produção ainda hoje. O que você faz?</p>
+<details>
+<summary>🚀 Publicar direto em produção</summary>
+<blockquote>💥 <b>Fim de jogo.</b> O formulário subiu com um campo obrigatório quebrado e o processo de compras parou. Seu fim de semana também. Feche esta opção e tente outra.</blockquote>
+</details>
+<details>
+<summary>🔍 Rodar a auditoria antes</summary>
+<blockquote>
+<p>✅ Boa. A auditoria terminou e apontou <b>1 erro e 3 avisos</b>. E agora?</p>
+<details>
+<summary>🛠️ Corrigir o erro e ler os avisos</summary>
+<blockquote>
+<p>✅ Tudo verde em 10 minutos. <b>Onde você publica primeiro?</b></p>
+<details>
+<summary>🏭 Em produção, estou confiante</summary>
+<blockquote>💥 <b>Fim de jogo.</b> Funcionava na sua máquina. Em produção, o dataset tinha outro nome. Feche esta opção e tente outra.</blockquote>
+</details>
+<details>
+<summary>🤫 No servidor do colega, sem avisar</summary>
+<blockquote>💥 <b>Fim de jogo.</b> Ele estava no meio de uma demonstração para o cliente. Vocês não se falam mais. Feche esta opção e tente outra.</blockquote>
+</details>
+<details>
+<summary>🧪 Em homologação, com dry-run</summary>
+<blockquote>
+<p>✅ Sábio. Mas o <code>dry-run</code> listou <b>12 formulários</b>, e você só alterou 1. O que faz?</p>
+<details>
+<summary>📦 Publicar os 12, vai que precisa</summary>
+<blockquote>💥 <b>Fim de jogo.</b> Onze deles eram rascunhos de outro time. Agora são rascunhos em uso. Feche esta opção e tente outra.</blockquote>
+</details>
+<details>
+<summary>🕵️ Investigar por que são 12</summary>
+<blockquote>
+<p>✅ O filtro estava vazio e pegava tudo. Você corrige, publica só o seu e a homologação passa. <b>Falta a produção, e o pipeline pede uma aprovação.</b></p>
+<details>
+<summary>🤝 Pedir para um colega revisar e aprovar</summary>
+<blockquote>🏆 <b>Missão cumprida!</b> Deploy em produção às 17h28, zero chamados abertos. Você audita, testa em homologação e pede revisão: pode trabalhar comigo. Bom fim de semana!</blockquote>
+</details>
+<details>
+<summary>🔑 Aprovar você mesmo, com a conta do chefe</summary>
+<blockquote>💥 <b>Fim de jogo.</b> O deploy passou, a auditoria de acessos também passou... na segunda-feira, pela sua mesa. Feche esta opção e tente outra.</blockquote>
+</details>
+<details>
+<summary>💪 <code>git push --force</code> e seja o que Deus quiser</summary>
+<blockquote>💥 <b>Fim de jogo.</b> Você sobrescreveu o trabalho de três pessoas a 2 minutos do fim do expediente. Feche esta opção e tente outra.</blockquote>
+</details>
+</blockquote>
+</details>
+<details>
+<summary>💻 Fechar o notebook bem devagar</summary>
+<blockquote>💥 <b>Fim de jogo.</b> O problema continuou lá, e na segunda-feira ele tinha crescido. Feche esta opção e tente outra.</blockquote>
+</details>
+</blockquote>
+</details>
+</blockquote>
+</details>
+<details>
+<summary>🙈 Ignorar, é só aviso</summary>
+<blockquote>💥 <b>Fim de jogo.</b> O "só aviso" era o erro. O formulário salvou todos os pedidos com valor zero. Feche esta opção e tente outra.</blockquote>
+</details>
+<details>
+<summary>🔇 Desligar a auditoria</summary>
+<blockquote>💥 <b>Fim de jogo.</b> Sem alarme não há incêndio, certo? Errado. Feche esta opção e tente outra.</blockquote>
+</details>
+</blockquote>
+</details>
+<details>
+<summary>🛋️ Deixar para segunda-feira</summary>
+<blockquote>😴 <b>Final alternativo.</b> Ninguém quebra produção numa sexta se não publicar na sexta. Só que o chefe pediu para hoje. Feche esta opção e tente outra.</blockquote>
+</details>
+</blockquote>
+</details>
 
 ## Atividade no GitHub
 

@@ -100,6 +100,6 @@ jobs:
             exit 0
           fi
           git commit -m "chore: atualiza cartoes do perfil"
-          # O jogo da velha tambem commita no main; integra antes de enviar.
+          # Integra commits que tenham chegado ao main durante a execucao.
           git pull --rebase --quiet
           git push
