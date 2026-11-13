@@ -1,16 +1,16 @@
 {
   "tabuleiro": [
-    "X",
-    "X",
-    "O",
-    "O",
-    "O",
-    "X",
-    "X",
-    "O",
-    "X"
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
   ],
-  "fim": "empate",
+  "fim": null,
   "placar": {
     "visitantes": 0,
     "bot": 0,
