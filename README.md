@@ -7,8 +7,7 @@ Trabalho com **Fluig**, **automação de processos** e **integrações**. Meu fo
 ## Tecnologias
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Fluig-0F6FDE?style=for-the-badge" alt="Fluig" />
-  <img src="https://img.shields.io/badge/FreeMarker-4A4A4A?style=for-the-badge" alt="FreeMarker" />
+  <img src="https://img.shields.io/badge/TOTVS%20Fluig-0F6FDE?style=for-the-badge" alt="TOTVS Fluig" />
   <img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge" alt="C#" />
   <img src="https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white" alt=".NET" />
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
